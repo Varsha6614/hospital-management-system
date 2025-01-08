@@ -27,9 +27,9 @@ and staff management.
 **Staff Management** <br>
 
 ### Technology Used
-**Java:** A robust and versatile language widely used for enterprise applications, known for its platform independence and strong object-oriented capabilities.
-**Python:** Popular for its readability, extensive libraries (like Django and Flask for web development), and growing use in AI/ML for predictive analytics within healthcare.
-**.NET(C#):** A Microsoft framework offering a powerful ecosystem for building scalable and secure applications.
+**Java:** A robust and versatile language widely used for enterprise applications, known for its platform independence and strong object-oriented capabilities. <br>
+**Python:** Popular for its readability, extensive libraries (like Django and Flask for web development), and growing use in AI/ML for predictive analytics within healthcare. <br>
+**.NET(C#):** A Microsoft framework offering a powerful ecosystem for building scalable and secure applications. <br>
 ## Relational Databases:##
 **MySQL:** A popular open-source database known for its speed and ease of use.   <br>
 **PostgreSQL:** A powerful open-source database with advanced features like full-text search and strong data integrity.   <br>  
