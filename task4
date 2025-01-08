@@ -1,0 +1,102 @@
+import java.awt.*;
+import java.awt.event.*;
+import java.sql.*;
+import java.util.*;
+import javax.swing.*;
+import javax.swing.table.*;
+
+public class HospitalManagementSystem {
+
+    // Database connection details
+    private static final String DB_URL = "jdbc:mysql://localhost:3306/hospital";
+    private static final String USER = "your_username";
+    private static final String PASS = "your_password";
+
+    // Main GUI class
+    private static class HospitalFrame extends JFrame {
+        private JTabbedPane tabbedPane;
+
+        public HospitalFrame() {
+            setTitle("Hospital Management System");
+            setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            setSize(800, 600);
+
+            tabbedPane = new JTabbedPane();
+
+            // Patient Management Tab
+            JPanel patientPanel = createPatientManagementPanel();
+            tabbedPane.addTab("Patients", patientPanel);
+
+            // Appointment Scheduling Tab
+            JPanel appointmentPanel = createAppointmentSchedulingPanel();
+            tabbedPane.addTab("Appointments", appointmentPanel);
+
+            // EHR Tab
+            JPanel ehrPanel = createEHRPanel();
+            tabbedPane.addTab("EHR", ehrPanel);
+
+            // Billing and Invoicing Tab
+            JPanel billingPanel = createBillingAndInvoicingPanel();
+            tabbedPane.addTab("Billing", billingPanel);
+
+            // Inventory Management Tab
+            JPanel inventoryPanel = createInventoryManagementPanel();
+            tabbedPane.addTab("Inventory", inventoryPanel);
+
+            // Staff Management Tab
+            JPanel staffPanel = createStaffManagementPanel();
+            tabbedPane.addTab("Staff", staffPanel);
+
+            add(tabbedPane);
+            setVisible(true);
+        }
+
+        // Patient Management Panel
+        private JPanel createPatientManagementPanel() {
+            JPanel panel = new JPanel(new BorderLayout());
+            // Add components for patient registration, search, and viewing
+            return panel;
+        }
+
+        // Appointment Scheduling Panel
+        private JPanel createAppointmentSchedulingPanel() {
+            JPanel panel = new JPanel(new BorderLayout());
+            // Add components for scheduling, rescheduling, and viewing appointments
+            return panel;
+        }
+
+        // EHR Panel
+        private JPanel createEHRPanel() {
+            JPanel panel = new JPanel(new BorderLayout());
+            // Add components for viewing and editing patient records
+            return panel;
+        }
+
+        // Billing and Invoicing Panel
+        private JPanel createBillingAndInvoicingPanel() {
+            JPanel panel = new JPanel(new BorderLayout());
+            // Add components for generating invoices, managing payments, and viewing reports
+            return panel;
+        }
+
+        // Inventory Management Panel
+        private JPanel createInventoryManagementPanel() {
+            JPanel panel = new JPanel(new BorderLayout());
+            // Add components for managing medical supplies, tracking stock levels, and generating reports
+            return panel;
+        }
+
+        // Staff Management Panel
+        private JPanel createStaffManagementPanel() {
+            JPanel panel = new JPanel(new BorderLayout());
+            // Add components for managing staff information, schedules, and assignments
+            return panel;
+        }
+    }
+
+    public static void main(String args) {
+        SwingUtilities.invokeLater(() -> {
+            new HospitalFrame();
+        });
+    }
+}
